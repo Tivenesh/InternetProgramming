@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #515B92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    left: 0;
+    z-index: 1000;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.result-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.application-result-image {
+    position: absolute;
+    top: 0;
+    margin-top: 10%;
+    right: 0;
+    margin-right: 7%;
+    width: 130px;
+    height: auto;
+    object-fit: cover;
+    z-index: 1000;
+}
+
+.result-box {
+    width: 732px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.result-box h1 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #141C65;
+    margin-bottom: 30px;
+}
+
+.application-details {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.application-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #141C65;
+}
+
+.application-details strong {
+    display: inline-block;
+    width: 200px;
+}
+
+.result-message {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #141C65;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-buttons a, .action-buttons button {
+    background-color: #FFC601;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #30325C;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-buttons button.hidden {
+    display: none;  /* Hide the print button dynamically */
+}
+
+.result-box .success {
+    color: green;
+}
+
+.result-box .pending {
+    color: #FFC601;
+}
+
+.result-box .rejected {
+    color: red;
+}
+
+/* Hide teacher comment if in progress */
+.comment-section.hidden {
+    display: none;
+}

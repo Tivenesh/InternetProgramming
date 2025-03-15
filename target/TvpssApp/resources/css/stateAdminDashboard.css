@@ -1,0 +1,300 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F8FAFF; 
+    color: #4B5563;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #E8EAFB; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 130px;
+    height: auto; 
+}
+
+.sidebar .logo h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4B5563;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4B5563;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar nav ul li a.active {
+    background: #4B6CB7;
+    color: #FFFFFF;
+}
+
+.sidebar nav ul li a:hover {
+    background: #354A9F;
+    color: #FFFFFF;
+}
+
+/* Settings Section */
+.settings {
+    margin-top: auto;
+    text-align: center;
+    font-size: 14px;
+    color: #6B7280;
+    padding: 20px 0;
+}
+
+.settings .setting-item {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px; 
+    font-size: 16px;
+    margin: 10px 0; 
+    color: #6B7280;
+    cursor: pointer;
+}
+
+.settings .setting-item:hover {
+    color: #4B6CB7;
+}
+
+.settings .divider {
+    height: 1px;
+    background-color: #D1D5DB;
+    margin: 10px 0;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Header Styling */
+.header {
+    padding: 10px 20px;
+    background-color: #F7F9FF;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #4B6CB7;
+}
+
+.user-info span {
+    font-size: 16px;
+    color: #4B5563;
+    font-weight: bold;
+}
+
+.divider {
+    height: 1px;
+    background: #D1D5DB;
+    margin: 10px 0;
+}
+
+/* Bottom Section: Welcome and Search Bar */
+.welcome-search {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+.welcome-search h1 {
+    font-size: 24px;
+    color: #4B6CB7;
+    margin: 0;
+    font-weight: normal;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 400px; 
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #C7D2FE;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #F0F3FF;
+    color: #4B5563; 
+}
+
+/* Notification Icon */
+.notification {
+    margin-right: 20px; 
+}
+
+.notification-icon {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #E0E6F8; 
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Bell Icon */
+.icon-bell:before {
+    content: "\1F514"; 
+    font-size: 18px;
+    color: #FFFFFF; 
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background: #FF5C5C;
+    border-radius: 50%;
+    border: 2px solid #E0E6F8; 
+}
+
+.alert {
+    position: absolute; 
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4B6CB7; 
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+}
+
+.alert img {
+    width: 55px;
+    height: 55px;
+}
+
+.alert strong {
+    font-size: 16px; 
+    font-weight: 600;
+}
+
+.alert p {
+    margin: 0; 
+    font-size: 12px; 
+}
+
+.alert .close-btn {
+    margin-left: auto; 
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.alert .close-btn:hover {
+    color: #E6E6E6; 
+}
+
+/* Slide-In Animation */
+@keyframes slideInFromTop {
+    0% {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* Slide-Out Animation */
+@keyframes slideOutToTop {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+}
+
+/* Apply animation when alert enters */
+.alert {
+    animation: slideInFromTop 1.0s ease-out;
+    transition: opacity 1.0s ease-out;
+}
+
+/* Add this class dynamically for the slide-out effect */
+.alert.slide-out {
+    animation: slideOutToTop 1.0s ease-in;
+}
